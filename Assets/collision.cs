@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class collision : MonoBehaviour
 {
+    public GameObject victoria;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,16 @@ public class collision : MonoBehaviour
         
     }
 
-    void OnCollisionEnter (Collision col)
+    void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "ball")
+        if (col.gameObject.name == "ball(Clone)" || col.gameObject.name == "ball1(Clone)")
         {
             gameObject.transform.position = new Vector3(3.95f, 1.25f, 0);
-            Debug.Log("aidasjdioa");
+        }
+
+        if(col.gameObject.name == "cuboVictoria")
+        {
+            victoria.SetActive(true);
         }
     }
 }
