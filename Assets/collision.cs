@@ -19,12 +19,12 @@ public class collision : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "ball(Clone)" || col.gameObject.name == "ball1(Clone)")
+        if (col.gameObject.name == "ball(Clone)" || col.gameObject.name == "ball 1(Clone)")
         {
             gameObject.transform.position = new Vector3(3.95f, 1.25f, 0);
         }
 
-        if(col.gameObject.name == "cuboVictoria")
+        if(col.gameObject.name == "CuboVictoria")
         {
             victoria.SetActive(true);
         }
