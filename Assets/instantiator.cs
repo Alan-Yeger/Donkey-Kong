@@ -6,6 +6,8 @@ public class instantiator : MonoBehaviour
 {
     public GameObject ball;
     public GameObject ball2;
+    /*public GameObject ball3;
+    public GameObject ball4;*/
     public float Timer = 0.1f;
     
 
@@ -32,6 +34,8 @@ public class instantiator : MonoBehaviour
             
             GameObject clon1 = Instantiate(ball, transform.position, ball.transform.rotation);
             GameObject clon2 = Instantiate(ball2, transform.position, ball.transform.rotation);
+            /*GameObject clon3 = Instantiate(ball3, transform.position, ball.transform.rotation);
+            GameObject clon4 = Instantiate(ball4, transform.position, ball.transform.rotation);*/
             clon1.transform.localPosition = new Vector3(-8.98f, 4.3f, -0.86f);
             clon2.transform.localPosition = new Vector3(-8.75f, 4.9f, -3.25f);
             clon1.transform.localEulerAngles = new Vector3(20, 70, 70);
